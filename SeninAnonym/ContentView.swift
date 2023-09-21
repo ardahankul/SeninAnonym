@@ -9,51 +9,56 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    
+    @State private var isLoggedIn = false
+    
+    init() {
+            // Check if the token exists in UserDefaults
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                _isLoggedIn = State(initialValue: true) // Set initial value of @State
+            }
+        }
+        
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+        
+        NavigationView {
+            
+            if isLoggedIn {
+                TabView{
+                    AskView()
+                        .tabItem {
+                            Image(systemName: "house")
+                            Text("Ask")
+                        }
+                    LinkView(isLoggedIn: $isLoggedIn)
+                        .tabItem {
+                            Image(systemName: "person")
+                            Text("Profile")
+                        }
+                    InboxView()
+                        .tabItem {
+                            Image(systemName: "envelope")
+                            Text("Inbox")
+                        }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+            }else{
+                VStack {
+                    
+                    LoginView(isLoggedIn: $isLoggedIn)
+                    /*
+                     NavigationLink(destination: LoginView(isLoggedIn: $isLoggedIn)){
+                     Text("Login")
+                     }
+                     NavigationLink(destination: RegisterView(isLoggedIn: $isLoggedIn)){
+                     Text("Register")
+                     } */
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
             }
         }
     }
 }
+
 
 #Preview {
     ContentView()

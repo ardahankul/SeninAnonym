@@ -12,6 +12,12 @@
 		38ACBF3B2AA4A7C800A1193D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBF3A2AA4A7C800A1193D /* Item.swift */; };
 		38ACBF3D2AA4A7CB00A1193D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38ACBF3C2AA4A7CB00A1193D /* Assets.xcassets */; };
 		38ACBF402AA4A7CB00A1193D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38ACBF3F2AA4A7CB00A1193D /* Preview Assets.xcassets */; };
+		38ACBF472AA4A96400A1193D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBF462AA4A96400A1193D /* LoginView.swift */; };
+		38ACBF492AA4A97500A1193D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBF482AA4A97500A1193D /* RegisterView.swift */; };
+		38ACBF4B2AA4AC5E00A1193D /* AskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBF4A2AA4AC5E00A1193D /* AskView.swift */; };
+		38ACBF4D2AA4ACAA00A1193D /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBF4C2AA4ACAA00A1193D /* InboxView.swift */; };
+		38ACBF4F2AA4ACDD00A1193D /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBF4E2AA4ACDD00A1193D /* LinkView.swift */; };
+		38ACBF512AA4D39800A1193D /* SeninAnonymAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBF502AA4D39800A1193D /* SeninAnonymAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,12 @@
 		38ACBF3A2AA4A7C800A1193D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		38ACBF3C2AA4A7CB00A1193D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38ACBF3F2AA4A7CB00A1193D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38ACBF462AA4A96400A1193D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		38ACBF482AA4A97500A1193D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		38ACBF4A2AA4AC5E00A1193D /* AskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskView.swift; sourceTree = "<group>"; };
+		38ACBF4C2AA4ACAA00A1193D /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		38ACBF4E2AA4ACDD00A1193D /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
+		38ACBF502AA4D39800A1193D /* SeninAnonymAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeninAnonymAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +67,12 @@
 			children = (
 				38ACBF362AA4A7C800A1193D /* SeninAnonymApp.swift */,
 				38ACBF382AA4A7C800A1193D /* ContentView.swift */,
+				38ACBF502AA4D39800A1193D /* SeninAnonymAPI.swift */,
+				38ACBF462AA4A96400A1193D /* LoginView.swift */,
+				38ACBF4A2AA4AC5E00A1193D /* AskView.swift */,
+				38ACBF482AA4A97500A1193D /* RegisterView.swift */,
+				38ACBF4E2AA4ACDD00A1193D /* LinkView.swift */,
+				38ACBF4C2AA4ACAA00A1193D /* InboxView.swift */,
 				38ACBF3A2AA4A7C800A1193D /* Item.swift */,
 				38ACBF3C2AA4A7CB00A1193D /* Assets.xcassets */,
 				38ACBF3E2AA4A7CB00A1193D /* Preview Content */,
@@ -140,8 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38ACBF4B2AA4AC5E00A1193D /* AskView.swift in Sources */,
 				38ACBF392AA4A7C800A1193D /* ContentView.swift in Sources */,
+				38ACBF4F2AA4ACDD00A1193D /* LinkView.swift in Sources */,
+				38ACBF492AA4A97500A1193D /* RegisterView.swift in Sources */,
+				38ACBF4D2AA4ACAA00A1193D /* InboxView.swift in Sources */,
 				38ACBF3B2AA4A7C800A1193D /* Item.swift in Sources */,
+				38ACBF512AA4D39800A1193D /* SeninAnonymAPI.swift in Sources */,
+				38ACBF472AA4A96400A1193D /* LoginView.swift in Sources */,
 				38ACBF372AA4A7C800A1193D /* SeninAnonymApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
